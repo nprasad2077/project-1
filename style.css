@@ -1,6 +1,8 @@
 h1 {
     text-align: center;
     font-style: bold;
+    color: white;
+    margin: auto;
 }
 * {
     padding: 0;
@@ -9,28 +11,43 @@ h1 {
 }
 body {
     height: 100vh;
-    background-color: blanchedalmond;
+    background-color: #001e38;
+    display: flex;
 }
 img {
     width: 100px;
 }
 .memory-game {
-    border: 2px solid lime;
+    /* border: 2px solid lime; */
     width: 640px;
     height: 640px;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 .memory-card {
-    border: 2px solid aqua;
-    width: 25%;
-    height: 33.333%;
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    position: relative;
+    margin: 5px;
+    transform: scale(1);
 }
-.frontFace {
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.backFace, .frontFace {
+    position: absolute;
+    /* border: 2px solid deeppink; */
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background: tan;
+}
+
+/* .backFace {
+    width: 100%;
     position: absolute;
     border: 2px solid deeppink;
-}
-.backFace {
-    position: absolute;
-    border: 2px solid deeppink;
-}
+} */
