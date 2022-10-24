@@ -12,21 +12,31 @@ function flipCard() {
         hasFlipped = true;
         firstCard = this;
         // console.log(hasFlipped, firstCard);
-    } else {                // Second Click
-        hasFlipped = false;
-        secondCard = this;
-        // console.log(firstCard.dataset.framework);     // Check if first card matches the second card
-        // console.log(secondCard.dataset.framework);
-        if (firstCard.dataset.framework === secondCard.dataset.framework){
-            firstCard.removeEventListener('click', flipCard)
-            secondCard.removeEventListener('click', flipCard)
-        } else {
-            setTimeout(() => {
-            firstCard.classList.remove('flip')
-            secondCard.classList.remove('flip')
-            }, 1500);
-        }
+        return;
     }
+    hasFlipped = false;
+    secondCard = this;
+    checkMatch();
+}
+
+
+
+function checkMatch () {            // Check for match
+    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
+    isMatch ? disableCard() : unflipCard()
+}
+
+function disableCard () {
+    firstCard.removeEventListener('click', flipCard)    //It's a match!
+    secondCard.removeEventListener('click', flipCard)
+}
+
+function unflipCard () {
+    setTimeout(() => {
+        firstCard.classList.remove('flip')      //Not a match
+        secondCard.classList.remove('flip')
+    }, 1500);
 }
 
 cards.forEach(cards => cards.addEventListener('click', flipCard))   //Add Event listeners to card elements. When clicked, execute flip function.
