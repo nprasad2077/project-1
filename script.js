@@ -3,6 +3,10 @@ let hasFlipped = false;
 let lockBoard = false;
 let firstCard;
 let secondCard;
+let score = 6;
+let scoreDisplay = document.querySelector('.scoreText')
+
+scoreDisplay.innerText = `There are ${score} pairs remaining!`
 
 function flipCard() {
     if (lockBoard) {return;}                //lock board to prevent revealing of other cards after 2 have been selected.
@@ -31,6 +35,9 @@ function checkMatch () {            // Check for match
 function disableCard () {
     firstCard.removeEventListener('click', flipCard)    //It's a match!
     secondCard.removeEventListener('click', flipCard)
+    score -= 1;
+    scoreDisplay.innerText = `There are ${score} pairs remaining!`
+    console.log(score);
 }
 
 function unflipCard () {

@@ -9,7 +9,10 @@
     <title>Flash Card Match!</title>
 </head>
 <body>
-    <!-- <h1>Welcome to Memory!</h1> -->
+    <div class="header">
+        <h1>Welcome to Pokemon Memory Match!</h1>
+        <p class="scoreText"></p>
+    </div>
     <section class="memory-game">
         <div class="memory-card" data-framework="blastoise">
             <img class="backFace" src="./img/Pokemon-Pokeball-PNG-Photo.png" alt="Poke-Ball">
@@ -60,6 +63,7 @@
             <img class="frontFace" src="./img/gengar.png" alt="Gengar">
         </div>
     </section>
+    <button onClick="window.location.reload();" class="reset">Reset Game</button>
     <script src="./script.js"></script>
 </body>
 </html>
