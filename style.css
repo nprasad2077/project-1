@@ -13,6 +13,7 @@ body {
     height: 100vh;
     background-color: #001e38;
     display: flex;
+    /* border: 2px solid white; */
 }
 img {
     width: 100px;
@@ -31,6 +32,7 @@ img {
     position: relative;
     margin: 5px;
     transform: scale(1);
+    /* border: 2px solid red; */
 }
 .memory-card:active {
     transform: scale(.97);
