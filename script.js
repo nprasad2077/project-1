@@ -6,7 +6,7 @@ let secondCard;
 
 function flipCard() {
     if (lockBoard) {return;}                //lock board to prevent revealing of other cards after 2 have been selected.
-    // if (this === firstCard) {return;}  //Prevents double-click on same card
+    if (this === firstCard) {return;}  //Prevents double-click on same card
     this.classList.toggle('flip')
     // console.log('clicked');
     // console.log(this);
@@ -21,8 +21,6 @@ function flipCard() {
     secondCard = this;
     checkMatch();
 }
-
-
 
 function checkMatch () {            // Check for match
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
@@ -40,9 +38,23 @@ function unflipCard () {
     setTimeout(() => {
         firstCard.classList.remove('flip')      //Not a match
         secondCard.classList.remove('flip')
-
-        lockBoard = false;
+        
+        resetBoard();
     }, 1500);
 }
+
+function resetBoard() {
+    hasFlipped = false;
+    lockBoard = false;
+    firstCard = null;
+    secondCard = null;
+}
+
+(function shuffle () {                                  // Shuffle Cards - Immediately Invoked function - executes when declared. 
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random()* 12)
+        card.style.order = randomPos;
+    })
+})();
 
 cards.forEach(cards => cards.addEventListener('click', flipCard))   //Add Event listeners to card elements. When clicked, execute flip function.
