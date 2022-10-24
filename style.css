@@ -58,6 +58,6 @@ img {
     backface-visibility: hidden;
 }
 
-.backFace {
+.frontFace {
     transform: rotateY(180deg);
 }
