@@ -2,3 +2,16 @@ h1 {
     text-align: center;
     font-style: bold;
 }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: blanchedalmond;
+}
+img {
+    width: 100px;
+    height: ;
+}
