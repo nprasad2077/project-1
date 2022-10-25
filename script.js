@@ -44,6 +44,9 @@ function disableCard () {
     // statusDisplay.innerText = 'Correct!'
     statusDisplay.innerHTML = '<p style="color: lime;">Correct!</p>'
     console.log(score);
+    if (score === 0){
+        winnerCheck();
+    }
 }
 
 function unflipCard () {
@@ -88,3 +91,12 @@ function windowOnClick (event) {
 trigger.addEventListener('click', toggleModal);
 closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
+
+
+//Winner Display
+
+function winnerCheck() {
+    setTimeout(() => {
+        alert('Congratulations! You completed the game board. Press reset to play again!');
+    }, 1250);
+}
