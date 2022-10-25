@@ -5,6 +5,7 @@ let firstCard;
 let secondCard;
 let score = 6;
 let scoreDisplay = document.querySelector('.scoreText')
+let statusDisplay = document.querySelector('.status')
 
 scoreDisplay.innerText = `There are ${score} pairs remaining!`
 
@@ -36,7 +37,8 @@ function disableCard () {
     firstCard.removeEventListener('click', flipCard)    //It's a match!
     secondCard.removeEventListener('click', flipCard)
     score -= 1;
-    scoreDisplay.innerText = `There are ${score} pairs remaining!`
+    scoreDisplay.innerText = `There are ${score} pair(s) remaining!`
+    statusDisplay.innerText = 'Correct!'
     console.log(score);
 }
 
@@ -45,7 +47,7 @@ function unflipCard () {
     setTimeout(() => {
         firstCard.classList.remove('flip')      //Not a match
         secondCard.classList.remove('flip')
-        
+        statusDisplay.innerText = 'Try Again'
         resetBoard();
     }, 1500);
 }
