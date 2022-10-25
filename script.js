@@ -9,6 +9,7 @@ let statusDisplay = document.querySelector('.status')
 const modal = document.querySelector('.modal');
 const trigger = document.querySelector('.trigger')
 const closeButton = document.querySelector('.close-button')
+const order1 = document.querySelector('[style="order: 1;"]')
 
 scoreDisplay.innerText = `There are ${score} pairs remaining!`
 statusDisplay.innerText = 'Pick two cards to begin.'
@@ -16,14 +17,12 @@ statusDisplay.innerText = 'Pick two cards to begin.'
 function flipCard() {
     if (lockBoard) {return;}                //lock board to prevent revealing of other cards after 2 have been selected.
     if (this === firstCard) {return;}  //Prevents double-click on same card
-    this.classList.toggle('flip')
-    // console.log('clicked');
-    // console.log(this);
+    this.classList.toggle('flip')       //Flip-Card animation
 
-    if (!hasFlipped) {      // First Click
+    if (!hasFlipped) {      
         hasFlipped = true;
-        firstCard = this;
-        // console.log(hasFlipped, firstCard);
+        firstCard = this;                   // First clicked card
+        console.log(hasFlipped, firstCard);
         return;
     }
     hasFlipped = false;
@@ -77,6 +76,8 @@ function resetBoard() {
 
 cards.forEach(cards => cards.addEventListener('click', flipCard))   //Add Event listeners to card elements. When clicked, execute flip function.
 
+
+
 // Modal 
 
 function toggleModal () {
@@ -101,3 +102,6 @@ function winnerCheck() {
         alert('Congratulations! You completed the game board. Press reset to play again!');
     }, 1250);
 }
+
+// Keybaord Selector
+

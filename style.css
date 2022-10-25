@@ -20,7 +20,7 @@ body {
     margin: auto;
     margin-top: 20px;
     font-size: 20px;
-    border: 2px solid rgb(255, 203, 5);
+    border: 4px solid rgb(255, 203, 5);
     padding: 20px;
 }
 img {
@@ -28,8 +28,10 @@ img {
 }
 .memory-game {
     /* border: 2px solid lime; */
-    width: 720px;
-    height: 720px;
+    /* width: 720px;
+    height: 720px; */
+    width: 80%;
+    height: calc(100%);
     display: flex;
     flex-wrap: wrap;
     margin: 10px auto 10px auto;
@@ -44,12 +46,14 @@ img {
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
-    /* transform: rotateY(180deg) */
     /* border: 2px solid red; */
 }
 .memory-card:active {
     transform: scale(.97);
     transition: transform .2s;
+}
+.memory-card:hover {
+    cursor: pointer;
 }
 
 .memory-card.flip {
