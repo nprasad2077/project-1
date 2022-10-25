@@ -6,6 +6,9 @@ let secondCard;
 let score = 6;
 let scoreDisplay = document.querySelector('.scoreText')
 let statusDisplay = document.querySelector('.status')
+const modal = document.querySelector('.modal');
+const trigger = document.querySelector('.trigger')
+const closeButton = document.querySelector('.close-button')
 
 scoreDisplay.innerText = `There are ${score} pairs remaining!`
 
@@ -38,7 +41,8 @@ function disableCard () {
     secondCard.removeEventListener('click', flipCard)
     score -= 1;
     scoreDisplay.innerText = `There are ${score} pair(s) remaining!`
-    statusDisplay.innerText = 'Correct!'
+    // statusDisplay.innerText = 'Correct!'
+    statusDisplay.innerHTML = '<p style="color: lime;">Correct!</p>'
     console.log(score);
 }
 
@@ -47,7 +51,8 @@ function unflipCard () {
     setTimeout(() => {
         firstCard.classList.remove('flip')      //Not a match
         secondCard.classList.remove('flip')
-        statusDisplay.innerText = 'Try Again'
+        // statusDisplay.innerText = 'Try Again'
+        statusDisplay.innerHTML = '<p style="color: red;">Try Again!</p>'
         resetBoard();
     }, 1500);
 }
@@ -67,3 +72,19 @@ function resetBoard() {
 })();
 
 cards.forEach(cards => cards.addEventListener('click', flipCard))   //Add Event listeners to card elements. When clicked, execute flip function.
+
+// Modal 
+
+function toggleModal () {
+    modal.classList.toggle('show-modal')
+}
+
+function windowOnClick (event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener('click', toggleModal);
+closeButton.addEventListener('click', toggleModal);
+window.addEventListener('click', windowOnClick);

@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="./script.js"></script> -->
+    <script defer src="./script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+    </style> 
     <link rel="stylesheet" href="./style.css">
     <title>Flash Card Match!</title>
 </head>
 <body>
     <div class="header">
         <h1>Welcome to Pokemon Memory Match!</h1>
-        <p class="scoreText"></p>
-        <p class="status"></p>
+        <!-- <p class="scoreText"></p>
+        <p class="status"></p> -->
     </div>
+    <p class="scoreText"></p>
+    <p class="status"></p>
     <section class="memory-game">
         <div class="memory-card" data-framework="blastoise">
             <img class="backFace" src="./img/Pokemon-Pokeball-PNG-Photo.png" alt="Poke-Ball">
@@ -65,6 +70,12 @@
         </div>
     </section>
     <button onClick="window.location.reload();" class="reset">Reset Game</button>
-    <script src="./script.js"></script>
+    <button class="trigger">How To Play</button>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h1>Modal Content</h1>
+        </div>
+    </div>
 </body>
 </html>
