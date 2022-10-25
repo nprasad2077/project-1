@@ -11,7 +11,7 @@ const trigger = document.querySelector('.trigger')
 const closeButton = document.querySelector('.close-button')
 
 scoreDisplay.innerText = `There are ${score} pairs remaining!`
-statusDisplay.innerText = 'Pick two cards to begin'
+statusDisplay.innerText = 'Pick two cards to begin.'
 
 function flipCard() {
     if (lockBoard) {return;}                //lock board to prevent revealing of other cards after 2 have been selected.
@@ -56,7 +56,7 @@ function unflipCard () {
         firstCard.classList.remove('flip')      //Not a match
         secondCard.classList.remove('flip')
         // statusDisplay.innerText = 'Try Again'
-        statusDisplay.innerHTML = '<p style="color: red;">Try Again!</p>'
+        statusDisplay.innerHTML = '<p style="color: rgb(254, 61, 0);">Incorrect. Try Again!</p>'
         resetBoard();
     }, 1500);
 }

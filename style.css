@@ -80,18 +80,20 @@ img {
 }
 
 .scoreText {
-    color: rgb(254, 61, 0);
+    /* color: rgb(254, 61, 0); */
+    color: lightblue;
     margin-top: 5px;
-    margin-bottom: 15px;
-    font-size: 25px;
+    margin-bottom: 10px;
+    font-size: 35px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 800;
 }
 .status {
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 10px;
     text-align: center;
+    font-weight: 600;
     /* position: fixed; */
 }
 .modal {
