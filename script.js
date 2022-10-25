@@ -11,6 +11,7 @@ const trigger = document.querySelector('.trigger')
 const closeButton = document.querySelector('.close-button')
 
 scoreDisplay.innerText = `There are ${score} pairs remaining!`
+statusDisplay.innerText = 'Pick two cards to begin'
 
 function flipCard() {
     if (lockBoard) {return;}                //lock board to prevent revealing of other cards after 2 have been selected.
