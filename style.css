@@ -32,7 +32,7 @@ img {
     height: 720px;
     display: flex;
     flex-wrap: wrap;
-    margin: 5px auto 10px auto;
+    margin: 10px auto 10px auto;
     margin-bottom: 10px;
     perspective: 1000px;
 }
@@ -113,7 +113,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: rgb(37, 77, 132);
     padding: 1rem 1.5rem;
     width: 24rem;
     border-radius: 0.5rem;
@@ -151,4 +151,10 @@ img {
 }
 ul li {
     padding: 5px 0px;
+}
+#how {
+    color: rgb(255, 203, 5);
+}
+#list {
+    color: white;
 }
