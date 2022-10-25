@@ -98,6 +98,7 @@ window.addEventListener('click', windowOnClick);
 //Winner Display
 
 function winnerCheck() {
+    statusDisplay.innerHTML = '<p style="color: rgb(255, 205, 5);">WINNER!</p>';
     setTimeout(() => {
         alert('Congratulations! You completed the game board. Press reset to play again!');
     }, 1250);
@@ -105,3 +106,9 @@ function winnerCheck() {
 
 // Keybaord Selector
 
+// cards.forEach(cards => addEventListener('keypress', function(event) {
+//     if (event.key === 'Enter') {
+//         event.preventDefault();
+//         cards.click();
+//     }
+// }))
