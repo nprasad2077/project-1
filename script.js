@@ -51,11 +51,12 @@ function disableCard () {
 
 function unflipCard () {
     lockBoard = true;
+    statusDisplay.innerHTML = '<p style="color: rgb(254, 61, 0);">Incorrect. Try Again!</p>'
     setTimeout(() => {
         firstCard.classList.remove('flip')      //Not a match
         secondCard.classList.remove('flip')
         // statusDisplay.innerText = 'Try Again'
-        statusDisplay.innerHTML = '<p style="color: rgb(254, 61, 0);">Incorrect. Try Again!</p>'
+        // statusDisplay.innerHTML = '<p style="color: rgb(254, 61, 0);">Incorrect. Try Again!</p>'
         resetBoard();
     }, 1500);
 }
