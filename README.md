@@ -29,3 +29,5 @@ This application is targeted at users looking for quick and casual fun with the 
 * I would like to create a theme switch so that the assets on the cards can be swapped out.
 * A leaderboard/scoreboard could be implemented to track times or turns taken to win the game. (database required)
 * A celebration animation once the user completes a game.
+
+[View Game on Personal Github](https://nprasad2077.github.io/project-1/lib/index.html)
