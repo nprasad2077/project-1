@@ -19,7 +19,7 @@ function flipCard() {
     if (this === firstCard) {return;}  //Prevents double-click on same card
     this.classList.toggle('flip')       //Flip-Card animation
 
-    if (!hasFlipped) {      
+    if (!hasFlipped) {                      //Allows for toggle between first card clicked and second card clicked. (has first card been clicked? true or false.)
         hasFlipped = true;
         firstCard = this;                   // First clicked card
         console.log(hasFlipped, firstCard);
@@ -33,7 +33,7 @@ function flipCard() {
 function checkMatch () {            // Check for match
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
-    isMatch ? disableCard() : unflipCard()
+    isMatch ? disableCard() : unflipCard()      //If match, remove event listener so card cant be clicked again. If no match, then flip card back over.
 }
 
 function disableCard () {
@@ -41,7 +41,6 @@ function disableCard () {
     secondCard.removeEventListener('click', flipCard)
     score -= 1;
     scoreDisplay.innerText = `There are ${score} pair(s) remaining!`
-    // statusDisplay.innerText = 'Correct!'
     statusDisplay.innerHTML = '<p style="color: lime;">Correct!</p>'
     console.log(score);
     if (score === 0){
@@ -53,10 +52,8 @@ function unflipCard () {
     lockBoard = true;
     statusDisplay.innerHTML = '<p style="color: rgb(254, 61, 0);">Incorrect. Try Again!</p>'
     setTimeout(() => {
-        firstCard.classList.remove('flip')      //Not a match
-        secondCard.classList.remove('flip')
-        // statusDisplay.innerText = 'Try Again'
-        // statusDisplay.innerHTML = '<p style="color: rgb(254, 61, 0);">Incorrect. Try Again!</p>'
+        firstCard.classList.toggle('flip')      //Not a match
+        secondCard.classList.toggle('flip')     //Remove or Toggle can be used here.
         resetBoard();
     }, 1500);
 }

@@ -28,13 +28,14 @@ img {
 }
 .memory-game {
     /* border: 2px solid lime; */
-    /* width: 720px;
-    height: 720px; */
-    width: 80%;
-    height: 100%;
+    width: 720px;
+    height: 720px;
+    /* width: 80%;
+    height: 100%; */
     display: flex;
     flex-wrap: wrap;
-    margin: 10px auto 10px auto;
+    margin: auto;
+    /* margin: 10px auto 10px auto; */
     margin-bottom: 10px;
     perspective: 1000px;
 }
