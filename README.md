@@ -3,7 +3,9 @@
 
 ## Flash Card Match
 
-![Screenshot 2022-10-26 at 10-06-14 Flash Card Match!](https://user-images.githubusercontent.com/114438461/198064200-4c8caef3-73e1-4660-b067-5f530d82a77c.png)![Screenshot 2022-10-26 at 10-06-34 Flash Card Match!](https://user-images.githubusercontent.com/114438461/198064279-a234b341-dd47-4928-9749-71c9044429ac.png)
+![Screenshot 2022-10-26 at 23-08-29 Flash Card Match!](https://user-images.githubusercontent.com/114438461/198293563-d28f169c-b3c0-4470-83db-9a05124c0f6c.png)![Screenshot 2022-10-26 at 23-09-29 Flash Card Match!](https://user-images.githubusercontent.com/114438461/198293591-7ca893b8-7b49-4881-8587-c9f39fe49c0f.png)
+
+
 
 
 ### List of Technologies Used
@@ -29,3 +31,5 @@ This application is targeted at users looking for quick and casual fun with the 
 * I would like to create a theme switch so that the assets on the cards can be swapped out.
 * A leaderboard/scoreboard could be implemented to track times or turns taken to win the game. (database required)
 * A celebration animation once the user completes a game.
+
+[View Game on Personal Github](https://nprasad2077.github.io/project-1/lib/index.html)
